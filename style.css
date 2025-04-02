@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+body {
+  background-color: white;
+  font: 1rem "Poppins", sans-serif;
+  color: black;
+}
+
+.hero {
+  /*background-image: url("/assets/buildingwgoldensheet.jpeg");*/
+  min-height: 40vh;
+  min-width: 100vw;
+  background-color: black;
+  /*background-repeat: repeat-x;*/
+}
+
+.hero h2 {
+  color: green;
+  margin-left: 15px;
+}
+
+.hero-header {
+  font: 3rem serif;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.image-stacks {
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-stacks img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: thin solid green;
+}
+
+.image-stacks .img-3 {
+  transform: translateY(-40px)
+}
+
+.image-stacks img:nth-child(2) {
+  transform: scale(120%);
+}
+
+.image-stacks img:nth-child(3) {
+  transform: scale(120%);
+}
+
+.apostrophe {
+  font: 10rem serif;
+}
+
+b {
+  font-size: 1.2rem;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commodities {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: #59EA4473;
+  padding: 1.5rem;
+  border: 3px dashed #837C7CE6
+}
+
+footer h1 {
+  font: 2.5rem Arial;
+  font-weight: bolder;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.3rem;
+  width: 90%;
+  text-align: center;
+}
+
+footer span {
+  font: 1rem Arial Bold;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons button {
+  border: thin solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
