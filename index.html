@@ -9,41 +9,87 @@
 </head>
 
 <body>
-  <header class="hero"><br><br>
-    <h2>VON Bridgeland Nigeria Ltd.</h2><br><br><br>
-    <p class="hero-header">CAMEROON, ZINC & WATER CONNECTORS</p><br><br><br><br>
-    <div class="image-stacks">
-      <img src="assets/blacksheetxpeep.jpeg" alt="roofing sheet" class="img-1">
-      <img src="assets/buildingwblacksheet.jpeg" alt="roofing sheet" class="img-2">
-      <img src="assets/goldensheet.jpeg" alt="roofing sheet" class="img-3">
-      <img src="assets/greensheet.jpeg" alt="roofing sheet" class="img-4">
+  <section class="nav">
+    <div class="nav-mobile-view">
+      <img src="/" alt="Logo">
+      <span class="nav-menu-btn" onclick="showMenu()">&#9776;</span>
     </div>
-  </header>
-  <main><br>
-    <p class="quote"><span class="apostrophe">‘‘</span><b>VON ALUMINUM TECHNOLOGY</b><br>is a name first in stone coated roofing sheet.</p>
-    <div class="commodities">
+    <div class="nav-desktop-view">
+      <img src="/" alt="Logo">
       <ul>
-        <li>LONG-SPAN</li>
-        <li>METCOPO</li>
-        <li>STEP-TILES</li>
-        <li>STONE TILES</li>
-        <li>ALUZINC (OVEN BAKED)</li>
-        <li>STUCCO MILL</li>
-        <li>CAMEROON ZINC</li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
-  </main>
-  <footer><br><br><br>
-    <h1>VON BRIDGELAND NIGERIA LTD.</h1><br>
-    <h2>08033242002; 08064970007</h2><br>
-    <div class="icons">
-      <!--<button><img src="assets/icons/phonenew.svg" alt="icon"></button>-->
-      <button><img src="assets/icons/phone-1.svg" alt="icon" width="20" height="20"></button>
-      <button><img src="assets/icons/whatsappwhite.svg" alt="icon" width="20" height="20"></button>
+  </section>
+  <aside>
+    <p onclick="hideMenu()">x</p>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
+  <section id="hero" class="hero">
+    <h1>CAMEROON ZINC & WATER CONNECTORS</h1>
+    <p>VON aluminum technology is a name first in stone coated roofing sheet</p>
+    <button class="hero-btn">Wanna know more?</button>
+  </section>
+  <section id="about" class="about">
+    <h1>About</h1>
+    <p>We offer roofing services and quality aluminum zinc & Cameroon water connectors.</p>
+    <h4>Our address:</h4>
+    <address>
+      <p>KM 3 Aba/Enugu Express-way Osisioma Aba, Abia State.</p>
+    </address>
+  </section>
+  <section id="services" class="services">
+    <h1>Services</h1>
+    <p>Services and products we offer/sell</p>
+    <ul>
+      <li>LONG-SPAN</li>
+      <li>METCOPO</li>
+      <li>STEP-TILES</li>
+      <li>STONE TILES</li>
+      <li>ALUZINC (OVEN BAKED)</li>
+      <li>STUCCO MILL</li>
+      <li>CAMEROON ZINC</li>
+    </ul>
+  </section>
+  <section id="gallery" class="gallery">
+    <h1>Gallery</h1>
+    <p>Our gallery—showcases some of our products and roofing sheets</p>
+    <div>
+      <img src="/assets/images/blacksheetxpeep.jpeg" alt="Gallery">
+      <img src="/assets/images/buildingwblacksheet.jpeg" alt="Gallery">
+      <img src="/assets/images/buildingwgoldensheet.jpeg" alt="Gallery">
+      <img src="/assets/images/goldensheet.jpeg" alt="Gallery">
+      <!--<img src="/assets/images/greensheet.jpeg" alt="Gallery">-->
     </div>
-    <p>km 3 Aba/Enugu Express-way Osisioma Aba, Abia State.</p><br><br>
-    <span>... BRINGING YOUR IMAGINATION TO REALITY</span><br><br>
-  </footer>
+  </section>
+  <section id="contact" class="contact">
+    <h1>Contact</h1>
+    <p>Want to reach out to us?</p>
+    <form action="">
+      <label for="name">Fullname:</label>
+      <input type="text" id="name" name="name" placeholder="John Paul" required>
+      <label for="email">Email address:</label>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+      <label for="report">Type a message here:</label>
+      <textarea name="report" id="report" cols="30" rows="10" placeholder="Tell us what you want!">Good day there, I need a roofing sheet at will!</textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <section class="footer">
+    <h6>&copy; All rights reserved VON Bridgeland LTD 2025</h6>
+  </section>
+  
+  <script src="/main.js"></script>
 </body>
 
 </html>

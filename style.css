@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -9,119 +10,272 @@
   src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
 }
 
+@font-face {
+  font-family: Libre Baskerville;
+  src: url(/assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+}
+
+/* CSS variables */
+:root {
+  /* Fonts */
+  --primary: #2e003e;
+  /* deep purple for hero bg */
+  --secondary: #e63946;
+  /* bold red */
+  --accent: #2a9d8f;
+  /* sea green/blue */
+  --highlight: #1d3557;
+  /* rich dark blue */
+  --text: black;
+  --text-white: white;
+  --heading: #2e003e;
+  /* Same as primary color for headings */
+  /* Font */
+  --ff: 1.2rem Poppins, sans-serif;
+  --heading-ff: 42px Libre Baskerville, sans-serif;
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+}
+
 body {
-  background-color: white;
-  font: 1rem "Poppins", sans-serif;
-  color: black;
+  font: var(--ff);
+  color: var(--text-dark);
+  background-color: var(--background);
+  width: 100%;
 }
 
 .hero {
-  /*background-image: url("/assets/buildingwgoldensheet.jpeg");*/
-  min-height: 40vh;
-  min-width: 100vw;
-  background-color: black;
-  /*background-repeat: repeat-x;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*padding: var(--space-sm);*/
+  margin: var(--space-xxl);
+  margin-top: 25vh;
 }
 
-.hero h2 {
-  color: green;
-  margin-left: 15px;
-}
-
-.hero-header {
-  font: 3rem serif;
-  color: white;
-  font-weight: bolder;
+.hero h1 {
   text-align: center;
+  color: var(--text);
+  font: var(--heading-ff);
+  font-weight: bold;
+  color: var(--heading);
+  line-height: 1.3em;
 }
 
-.image-stacks {
-  margin-top: 15%;
+.hero p {
+  margin: var(--space-lg);
+}
+
+.hero-btn {
+  font: inherit;
+  font-weight: bold;
+  height: 60px;
+  width: 180px;
+  color: var(--text-white);
+  background-color: var(--secondary);
+  padding: var(--space-xm);
+  border: thin solid black;
+  cursor: pointer;
+}
+
+.nav-mobile-view {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+.nav-menu-btn {
+  font: 1.5rem monospace;
+  color: white;
+  cursor: pointer;
+}
+
+aside {
+  width: 0;
+  height: 100%;
+  background-color: var(--primary);
+  color: white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.50s ease all;
+}
+
+aside ul li a {
+  color: white;
+}
+
+aside ul li {
+  margin: var(--space-md);
+  list-style-type: none;
+}
+
+aside p {
+  font-family: monospace;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: var(--space-lg);
+}
+
+.d-n {
+  display: none;
+}
+
+img[alt] {
+  color: white;
+}
+
+.about,
+.services,
+.gallery,
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--space-md);
+  margin: var(--space-xl);
+}
+
+.about h1,
+.services h1,
+.gallery h1,
+.contact h1 {
+  font-family: Libre Baskerville, sans-serif;
+  color: var(--accent);
+  font-size: 34px;
+}
+
+.about p,
+.services p,
+.gallery p,
+.contact p {
+  margin: var(--space-lg);
+}
+
+.services ul {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;*/
+}
+
+.services ul li {
+  list-style-type: square;
+}
+
+.gallery div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  /*margin: var(--space-xs);*/
 }
 
-.image-stacks img {
+.gallery div img {
+  width: 125px;
+  height: 125px;
+  border: 3px solid var(--accent);
+}
+
+.contact form {
+  /*background-color: var(--highlight);
+  color: white;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact label {
+  margin: var(--space-md);
+}
+
+.contact input {
+  font: inherit;
+  height: 40px;
+  width: 190px;
+  border: 1.5px solid var(--accent);
+  border-radius: 5px;
+  padding: var(--space-sm);
+}
+
+.contact textarea {
+  font: inherit;
+  height: 80px;
+  width: 200px;
+  padding: var(--space-sm);
+  border: 1.5px solid var(--accent);
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  font: inherit;
+  color: white;
+  background-color: var(--secondary);
+  height: 40px;
   width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: thin solid green;
-}
-
-.image-stacks .img-3 {
-  transform: translateY(-40px)
-}
-
-.image-stacks img:nth-child(2) {
-  transform: scale(120%);
-}
-
-.image-stacks img:nth-child(3) {
-  transform: scale(120%);
-}
-
-.apostrophe {
-  font: 10rem serif;
-}
-
-b {
-  font-size: 1.2rem;
-}
-
-.quote {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.commodities {
-  margin: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  background-color: #59EA4473;
-  padding: 1.5rem;
-  border: 3px dashed #837C7CE6
-}
-
-footer h1 {
-  font: 2.5rem Arial;
-  font-weight: bolder;
-  text-align: center;
-}
-
-footer h2 {
-  font-size: 2rem;
-  font-weight: bolder;
-  text-align: center;
-}
-
-footer p {
-  font-size: 1.3rem;
-  width: 90%;
-  text-align: center;
-}
-
-footer span {
-  font: 1rem Arial Bold;
-  font-weight: bolder;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icons button {
+  margin: var(--space-md);
   border: thin solid black;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  font: 16px Libre Baskerville;
+  color: white;
+  background: var(--primary);
+  padding: var(--space-lg);
+}
+
+.nav-desktop-view {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+
+  .nav-mobile-view,
+  aside {
+    display: none;
+  }
+
+  .nav-desktop-view {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: var(--space-lg);
+    display: flex;
+    display-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--primary);
+  }
+
+  .nav-desktop-view ul li {
+    /*display: flex;
+    flex-direction: row;*/
+  }
 }
